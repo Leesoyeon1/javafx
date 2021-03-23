@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DBcon {//DB를 연결
+public class DBcon {// DB를 연결
 	static {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -15,7 +15,7 @@ public class DBcon {//DB를 연결
 
 	public static Connection getConnection() {
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
-		String id ="hr";
+		String id = "hr";
 		String password = "hr";
 		Connection conn = null;
 		try {
@@ -25,7 +25,5 @@ public class DBcon {//DB를 연결
 		}
 		return conn;
 	}
-
-
 
 }

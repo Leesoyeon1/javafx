@@ -26,5 +26,11 @@ public class Phone {
 	public void setImage(String image) {
 		this.image.set(image);
 	}
+	public SimpleStringProperty smartPhoneProperty() {
+		return smartPhone;
+	}
+	public SimpleStringProperty imageProperty() {
+		return image;
+	}
 
 }

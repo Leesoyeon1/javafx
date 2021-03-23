@@ -15,6 +15,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class RootController implements Initializable {
@@ -50,9 +51,13 @@ public class RootController implements Initializable {
 				new Phone("갤럭시S7", "phone07.png")
 				);
 		
-		TableColumn<S, T> tcSmartPhone = tableView.getColumns().get(0;
+		TableColumn tcSmartPhone = tableView.getColumns().get(0);
 		tcSmartPhone.setCellValueFactory(new PropertyValueFactory("smartPhone"));
 		tcSmartPhone.setStyle("-fx-alignment:CENTER;");
+		
+		TableColumn tcImage = tableView.getColumns().get(1);
+		tcImage.setCellValueFactory(new PropertyValueFactory("image"));
+		tcImage.setStyle("-fx-alignment:CENTER;");
 		
 		tableView.setItems(phoneList);
 		
@@ -63,7 +68,7 @@ public class RootController implements Initializable {
 					public void changed(ObservableValue<? extends Phone> observable, Phone oleValue, Phone newValue) {
 						if(newValue!=null) {
 							imageView.setImage(new Image(
-									getClass().getResource("images/" + newValue.getImage()).toString()));
+									getClass().getResource("../../images/" + newValue.getImage()).toString()));
 						}
 						
 					}
