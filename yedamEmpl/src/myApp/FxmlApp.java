@@ -11,7 +11,7 @@ public class FxmlApp extends Application {
 
    @Override
    public void start(Stage primaryStage) throws Exception {
-      Parent root = FXMLLoader.load(getClass().getResource("viewPackage/Board.fxml"));
+      Parent root = FXMLLoader.load(getClass().getResource("AppMain.Student/Root.fxml"));
       
       // 컨테이너를 scene의 매개값으로
       Scene scene = new Scene(root);

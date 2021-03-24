@@ -19,16 +19,7 @@ import javafx.scene.control.TextField;
 
 public class RootController implements Initializable {
 	@FXML
-	private TextField txtTitle;
-	@FXML
-	private PasswordField txtPassword;
-	@FXML
-	private ComboBox<String> comboPublic;
-	@FXML
-	private DatePicker exitDate;
-	@FXML
-	private TextArea txtContent;
-	
+	private TableView<score>
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
